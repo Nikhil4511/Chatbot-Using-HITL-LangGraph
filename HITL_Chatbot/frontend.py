@@ -11,6 +11,21 @@ import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
 from langgraph.types import Command
 
+
+
+import os
+
+for key in ("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", "C9PE94QUEW9VWGFM"):
+    try:
+        if key not in os.environ and key in st.secrets:
+            os.environ[key] = st.secrets[key]
+    except Exception:
+        pass  # no secrets file locally; .env will be used instead
+
+if not os.getenv("OPENAI_API_KEY"):
+    st.error("OPENAI_API_KEY is missing. Add it in Settings > Secrets (or in your local .env file).")
+    st.stop()
+
 # ------------------------------------------------------------------
 # Page config
 # ------------------------------------------------------------------
