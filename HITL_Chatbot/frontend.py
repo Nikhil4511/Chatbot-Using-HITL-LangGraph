@@ -15,7 +15,7 @@ from langgraph.types import Command
 
 import os
 
-for key in ("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", "C9PE94QUEW9VWGFM"):
+for key in ("sk-proj-9cC8l8dMoo0oFt7fvM5dWf3u_XA-UCvedSyvmQebIV45VkVgAqpIpep8PNrk7j28_-T3BlbkFJKCe-vHPdoXqPCnZ2ji3mBynMZsQowIPFuoQHaTyQjDgvjJd0SSqJUdVEqVjNiRumz22YNqlCcA", "C9PE94QUEW9VWGFM"):
     try:
         if key not in os.environ and key in st.secrets:
             os.environ[key] = st.secrets[key]
