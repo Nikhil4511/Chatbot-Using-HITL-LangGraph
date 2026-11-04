@@ -1,4 +1,4 @@
-# HITL-Chatbot-Using LangGraph
+# Chatbot-Using LangGraph
 
 # StockPilot
 
